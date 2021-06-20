@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiMedMyStem</name>
+    </assembly>
+    <members>
+        <member name="T:WebApiMedMyStem.Controllers.ParserController">
+            <summary>
+            Область запросов для парсинга отдельных строк
+            </summary>
+            <response code="204">Ошибка: отсутвуют входные данные</response>
+            <response code="200">Удачный запрос</response>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.ParserController.GetCode(System.String)">
+             <summary>
+             Метод для получения списка кодов МКБ-10 из строки
+             </summary>
+             /// <remarks>
+             Sample request:
+            
+                 Get api/Parser/GetCode/?data=i25.1 i 11.9
+            
+             </remarks>
+             <param name="data">Строка, которую необходимо изучить</param>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.ParserController.GetDisease(System.String)">
+             <summary>
+             Метод для получения списка заболеваний из строки
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 Get api/Parser/GetDisease/?data=СД тип 2
+            
+             </remarks>
+             <param name="data">Строка, которую необходимо изучить</param>
+        </member>
+        <member name="T:WebApiMedMyStem.Controllers.SearchController">
+            <summary>
+            Область запросов для получения нахождения соответвий по названию элементов, с учетом всех аббревиатур, опечаток, сокращений и т.д.
+            </summary>
+            <response code="204">Ошибка: отсутвуют входные данные</response>
+            <response code="200">Удачный запрос</response>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.SearchController.GetServices(System.String)">
+             <summary>
+             Метод для поиска услуг с кодами по строке
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Search/GetServices/?data=оам
+            
+             </remarks>
+             <param name="data">Строка, которую необходимо изучить</param>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.SearchController.PostServices(System.Collections.Generic.List{System.String})">
+            <summary>
+            Метод для поиска услуг с кодами по массиву строк
+            </summary>
+            <param name="data">Массив строк, которые необходимо изучить</param>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.SearchController.GetMedicines(System.String)">
+             <summary>
+             Метод для поиска лекарств в строке
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Search/GetMedicines/?data=НИТРОКСОЛИН ФТОРУРАЦИЛ
+            
+             </remarks>
+             <param name="data">Строка, которую необходимо изучить</param>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.SearchController.GetMkb(System.String)">
+             <summary>
+             Метод для поиска заболеваний в строке 
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Search/GetMkb/?data=H35.8 - Другие уточненные ретинальные нарушения
+            
+             </remarks>
+             <param name="data">Строка, которую необходимо изучить</param>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.SearchController.PostMkbSet(System.Collections.Generic.List{System.String})">
+            <summary>
+            Метод для поиска заболеваний в массиве строк 
+            </summary>
+            <param name="data">Массив строк, которые необходимо изучить</param>
+        </member>
+        <member name="T:WebApiMedMyStem.Controllers.StandartController">
+            <summary>
+            Область запросов для получения стандартов
+            </summary>
+            <response code="204">Ошибка: отсутвуют входные данные</response>
+            <response code="200">Удачный запрос</response>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:WebApiMedMyStem.Controllers.StandartController.GetStandartMkb(System.String,System.Int32,System.Int32)" -->
+        <member name="M:WebApiMedMyStem.Controllers.StandartController.GetStandartServices(System.String,System.Int32,System.Int32)">
+             <summary>
+             Метод для поиска стандартов в которых содержится код услуги
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Standart/GetStandartServices/?data=B01.003.001
+            
+             </remarks>
+             <param name="data">Код услуги</param>
+             <param name="sex">Пол пациента</param>
+             <param name="age">Возраст пациента</param>
+        </member>
+        <member name="M:WebApiMedMyStem.Controllers.StandartController.GetStandartMedicament(System.String,System.Int32,System.Int32)">
+             <summary>
+             Метод для поиска стандартов в которых содержится лекарство
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /api/Standart/GetStandartMedicament/?data=Блокаторы Н2-гистаминовых рецепторов
+            
+             </remarks>
+             <param name="data">Название лекарства</param>
+             <param name="sex">Пол пациента</param>
+             <param name="age">Возраст пациента</param>
+        </member>
+        <member name="P:WebApiMedMyStem.JsonGetCode.LastName">
+            <summary>
+            The name of the product
+            </summary>
+            <example>Men's basketball shoes</example>
+        </member>
+    </members>
+</doc>

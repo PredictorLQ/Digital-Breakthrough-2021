@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "UI-интерфейс";
+}
+
+<div class="grid-ui">
+    <div>
+        <h1>UI-интерфейс</h1>
+        <div class="pt-4">
+            <select class="form-control" id="select">
+                <optgroup label="Парсинг">
+                    <option value="0" selected>Получить коды МКБ-10</option>
+                    <option value="1">Получить список заболеваний</option>
+                </optgroup>
+                <optgroup label="Поиск элементов в строке">
+                    <option value="2">Поиск услуг</option>
+                    <option value="3">Поиск лекарств</option>
+                    <option value="4">Поиск заболеваний</option>
+                </optgroup>
+                <optgroup label="Поиск стандартов">
+                    <option value="5">По коду МКБ-10</option>
+                    <option value="6">По названию услуги</option>
+                    <option value="7">По названию лекарства</option>
+                </optgroup>
+            </select>
+            <div class="text-center">
+                <small>Выберите необходимую услугу и введите требуемые данные для поиска</small>
+            </div>
+            <div class="grid-ui-search mt-4">
+                <input type="text" class="form-control" placeholder="Введите текст" id="input"/>
+                <button class="btn btn-primary save">
+                    <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true" style="display:none;"></span>Поиск
+                </button>
+            </div>
+            <div id="search-standart" style="display:none">
+                <div class="row mt-2">
+                    <div class="col">
+                        <small>Выберите пол</small>
+                        <select class="form-control" id="select-sex">
+                            <option value="0" selected>любой</option>
+                            <option value="1">мужчины</option>
+                            <option value="2">женщины</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <small>Выберите возрастную категорию</small>
+                        <select class="form-control" id="select-age">
+                            <option value="0" selected>любой</option>
+                            <option value="1">дети</option>
+                            <option value="2">взрослые</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="start" class="pl-5">
+        <div class="d-flex align-items-center h-100">
+            <img src="~/img/ui.svg" class="w-100 d-block" />
+        </div>
+    </div>
+    <div id="error" style="display:none"  class="pl-5">
+        <div class="d-flex align-items-center h-100">
+            <div>
+                <img src="~/img/error.svg" class="w-100 d-block" />
+                <div class="text-muted mt-3">Не могу понять, что с запросом...</div>
+            </div>
+        </div>
+    </div>
+    <div id="result" style="display:none">
+    </div>
+</div>

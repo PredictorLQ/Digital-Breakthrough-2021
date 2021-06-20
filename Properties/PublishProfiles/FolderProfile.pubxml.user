@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\79234\source\repos\PredictorLQ\BioGenom\WebApiMedMyStem\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2021-06-20T02:23:19.2952177Z;True|2021-06-20T03:24:32.6535341+07:00;True|2021-06-19T19:07:17.5359016+07:00;True|2021-06-19T19:00:21.8999662+07:00;True|2021-06-19T01:42:28.3357194+07:00;True|2021-06-19T01:33:45.6126743+07:00;</History>
+  </PropertyGroup>
+</Project>

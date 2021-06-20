@@ -1,0 +1,282 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+* {
+    color: #343a40;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+[class*=grid] {
+    display: grid !important;
+}
+/**{
+    border: 1px solid red;
+}*/
+.grid-index {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: calc(100vh - 8rem);
+}
+
+.grid-why {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.875rem;
+}
+
+.why-img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.process, .mis, .info {
+    padding-top: 60px;
+}
+
+.grid-process, .grid-info {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: calc(100vh - 8rem);
+}
+
+.grid-process-item {
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1.875rem;
+    padding: 1rem .5rem;
+    font-size: 1.2rem;
+}
+
+    .grid-process-item img {
+        width: 1rem;
+        height: 1rem;
+    }
+.grid-mis{
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1.875rem;
+    margin-top: 40px;
+}
+.mis-item {
+    padding: .75rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    text-align: center;
+}
+.info{
+    padding-bottom: 40px;
+}
+.info-chart{
+    padding: 100%;
+}
+.info-chart-1{
+    top: 3%;
+    left:-5%;
+}
+.info-chart-2{
+    top: 10%;
+    right: -5%;
+}
+.info-chart-3 {
+    top: 60%;
+    left: -12%;
+}
+.info-chart-4 {
+    top: 40%;
+    right: -12%;
+}
+.info-chart-5 {
+    top: 80%;
+    right: -5%;
+}
+.grid-ui {
+    grid-template-columns: .7fr 1fr;
+    grid-gap: 1.875rem;
+    min-height: calc(100vh - 10rem);
+}
+.grid-ui-search{
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 1rem;
+}
+
+.hide, .hide-l, .hide + label ~ div, .grid-cb-db.activ .hide-l + label ~ div {
+    display: none;
+}
+
+    .hide + label, .grid-cb-db.activ .hide-l + label {
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--blue);
+        display: block;
+        font-size: 1rem;
+        position: relative;
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        background-color: rgba(0,0,0,.03);
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        margin-bottom: 0.5rem;
+    }
+
+    .hide + label {
+        padding: 1rem 1.35rem;
+    }
+
+.grid-cb-db.activ .hide-l + label {
+    padding: .5rem;
+}
+
+.hide:checked + label, .grid-cb-db.activ .hide-l:checked + label {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: 0;
+}
+
+    .hide:checked + label + div, .grid-cb-db.activ .hide-l:checked + label + div {
+        display: block;
+        flex: 1 1 auto;
+        background-color: var(--white);
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-bottom-right-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+        -webkit-animation: fade ease-in 0.5s;
+        -moz-animation: fade ease-in 0.5s;
+        animation: fade ease-in 0.5s;
+        margin-bottom: 0.5rem;
+    }
+
+    .hide:checked + label + div {
+        padding: 1.25rem;
+    }
+
+    .grid-cb-db.activ .hide-l:checked + label + div {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+    }
+
+.hide + label:before {
+    content: "\276F";
+    float: right;
+    transform: rotate(180deg);
+    font-weight: 900;
+    margin-left: 1rem;
+}
+
+.hide:checked + label:before {
+    transform: rotate(90deg);
+}
+.t-9{
+    font-size: .9rem;
+}
+.ui-info{
+    max-height: 15rem;
+    overflow:auto;
+}
+.top-0{
+    top:0;
+}
+::-webkit-scrollbar-button {
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0px
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: .25rem;
+    background-color: #e5e5e5;
+}
+
+::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
